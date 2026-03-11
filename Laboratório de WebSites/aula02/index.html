@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+
+    <style>
+        h1 {
+            font-size: 4rem;
+        }
+
+        body {
+            text-align: center;
+        }
+        button {
+            padding: 30px;
+            border: 1px solid black;
+            border-radius: 15px;
+            font-size: 2rem;
+        }
+        section#sessao1 > h1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: 4rem;
+        }
+        section#sessao1 {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+        section#sessao2 > p {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+            margin-top: 5rem;
+            font-size: 5rem;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+    <section id="sessao1">
+        <h1>Mostrando dados pelo <i>alert()</i></h1>
+        <button id="btn" onclick="saudacao1()">Clique</button>
+    </section>
+    <section id="sessao2">
+        <h1>Mostrando dados pelo <i>"nome_variavel".innerHTML</i></h1>
+        <button id="btn" onclick="saudacao2()">Clique</button>
+        <p id="resultado"></p>
+    </section>
+
+
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>

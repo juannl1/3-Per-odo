@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        body {
+            font-family: 3rem;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: antiquewhite;
+        }
+
+        button {
+            background-color: black;
+            border: 1px solid black;
+            border-radius: 10px;
+            font-size: 20px;
+            padding: 30px;
+            color: white;
+            transition: 0.2s ease-in;
+
+        }
+
+        button:hover {
+            border-radius: 20px;
+            cursor: pointer;
+            transition: 0.2s ease-out;
+
+            background-color: gray;
+            color: black;
+        } 
+
+        .frases {
+            font-size: 20px;
+            margin-left: 15px;
+        }
+        #metade {
+            font-size: 20px;
+        }
+        #dobro {
+            font-size: 20px;
+        }
+        
+    </style>
+
+    <title>Aula 03</title>
+</head>
+
+<body>
+    <h1>Funcao</h1>
+    <p id="texto1"></p>
+    <p id="texto2"></p>
+    <p id="texto3"></p>
+    <p id="texto4"></p>
+    <p id="texto5"></p>
+
+
+    <section id="secao1">
+        <p>
+            <button id="botao1" onclick="acao1()">Ação 1</button>
+            <label id="frase1" class="frases"></label>
+        </p>
+        <p>
+            <button id="botao2" onclick="acao2()">Ação 2</button>
+            <label id="frase2" class="frases"></label>
+        </p>
+
+        <p>
+            <button id="botao3" onclick="acao3()">Ação 3</button>
+            <label id="frase3" class="frases"></label>
+        </p>
+
+        <p>
+            <button id="botao4" onclick="acao4()">Ação 4</button>
+            <label id="frase4" class="frases"></label>
+        </p>
+    </section>
+
+
+    <section id="secao2">
+        <div>
+            <h1>Calculo</h1>
+            <p>
+                <button onclick="calcular()">Clique para inserir um valor</button>
+                    <p id="metade"></p>
+                    <p id="dobro"></p>
+            </p>
+        </div>
+    </section>
+    <script src="index.js"></script>
+</body>
+
+</html>

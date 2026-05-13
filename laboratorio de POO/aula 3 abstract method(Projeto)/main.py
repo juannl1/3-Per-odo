@@ -1,18 +1,16 @@
-from notificadorEmail import NotificadorEmail
-from notificadorLOG import NotificadorLog
-from notificadorSMS import NotificadorSMS
-from notificadorWhatsapp import NotificadorWhatsapp
-from gerenciadorNotificacoes import GerenciadorDeNotificacoes
+from notif_email import NotificadorEmail
+from notif_sms import NotificadorSMS
+from notif_whatsapp import NotificadorWhatsapp
+from gerenciador import GerenciadorDeNotificacoes
+from notif_log import NotificadorLog
 
+
+#Exemplo de uso:
 email = NotificadorEmail()
 sms = NotificadorSMS()
-whatsapp = NotificadorWhatsapp()
-
 log = NotificadorLog()
+zap = NotificadorWhatsapp()
 
-notificadores = [email, sms, whatsapp, log]
-gerenciador = GerenciadorDeNotificacoes(notificadores)
+gerenciador = GerenciadorDeNotificacoes([email, sms, log, zap])
+gerenciador.enviar_todos("Sistema em manutenção às 22h.")
 
-pergunta = str(input("Mensagem > > > "))
-
-gerenciador.enviar_todos(pergunta)

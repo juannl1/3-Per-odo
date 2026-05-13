@@ -1,5 +1,6 @@
 from notificador import Notificador
 
+
 class GerenciadorDeNotificacoes:
     def __init__(self, notificadores: list[Notificador]):
         self.notificadores = notificadores

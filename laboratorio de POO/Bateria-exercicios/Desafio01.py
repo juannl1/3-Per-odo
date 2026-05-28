@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 class Pedido:
     def __init__(self, cliente: str, tipo_entrega: str):
         self.cliente = cliente

@@ -1,24 +1,25 @@
-from abc import ABC as abc, abstractmethod
+from abc import ABC, abstractmethod
 
-class PublicadorConteudo:
-
+class PublicadorConteudo(ABC):
+    @abstractmethod
     def publicar_video(self):
         pass
 
+class Aovivo(ABC):
+    @abstractmethod
     def transmitir_ao_vivo(self):
         pass
 
-
-class CursoGravado(PublicadorConteudo):
+class Video(PublicadorConteudo):
 
     def publicar_video(self):
         print("Vídeo publicado")
 
-class Aovivo:
+class Transmissao(Aovivo):
     def transmitir_ao_vivo(self):
         print("Transmitindo AOVIVO")
 
-class Database(abc):
+class Database(ABC):
     @abstractmethod
     def conectar(self):
         pass
@@ -36,7 +37,7 @@ class PlataformaCursos:
         self.database.conectar()
         print("Curso salvo")
 
-class NotificadorDoSistema(abc):
+class NotificadorDoSistema(ABC):
     @abstractmethod
     def enviar(self, mensagem):
         pass
@@ -58,8 +59,8 @@ class NotificadorPUSH(NotificadorDoSistema):
 # PUBLICAÇÃO DE CURSOS
 # =====================================
 
-curso = CursoGravado()
-curso_aovivo = Aovivo()
+curso = Video()
+curso_aovivo = Transmissao()
 
 curso.publicar_video()
 

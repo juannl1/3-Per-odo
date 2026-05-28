@@ -64,7 +64,9 @@ class RelatorioPedido:
 #Exemplos de Uso:
 pedidos = [Pedido("Tiago", "retirada"), Pedido("Juan", "Retirada")]
 
+usuario = 1
 for pedido in pedidos:
+    print(f"\n========= {usuario}° Usuario {pedido.cliente} =========\n")
     pedido.adicionar_item("Notebook", 3500)
     pedido.adicionar_item("Mouse Gamer", 250)
 
@@ -72,13 +74,14 @@ for pedido in pedidos:
 
     print(f"Total com desconto VIP: R$ {DescontoVip.descontar(pedido.total)} \nTotal com desconto Comum: R$ {DescontoComum.descontar(pedido.total)} \nTotal com desconto Funcionário: R$ {DescontoFuncionario.descontar(pedido.total)}")
 
-    print(f"Total com desconto: R$ {pedido.total}")
-
+    print("\n")
     PedidoRepository.salvar_no_banco(pedido.cliente)
 
     EmailService.enviar_email_confirmacao(pedido.cliente)
 
+    print("\n")
     RelatorioPedido.gerar_relatorio(pedido.itens)
 
     print(EntregaMotoboy.realizar_entrega())
-print("finalizado")
+    print("\n\n\n")
+    usuario += 1

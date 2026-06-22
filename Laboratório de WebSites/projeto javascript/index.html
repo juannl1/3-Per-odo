@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site com Controles de Vídeo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Laboratório de programamação Front-End</h1>
+        <p>Controles de reprodução e formulário gerenciados por JavaScript</p>
+    </header>
+
+    <main class="container">
+        <section class="video-section">
+            <h2>Reprodutor de Vídeo Interativo</h2>
+            
+            <div class="video-reproduzindo">
+                <video id="meuVideo" width="100%">
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Seu navegador não suporta a tag de vídeo.
+                </video>
+            </div>
+
+            <div class="video-controls">
+                <button type="button" id="btnPlay" class="btn-video">▶ Play</button>
+                <button type="button" id="btnPause" class="btn-video">⏸ Pause</button>
+                <button type="button" id="btnMudarVideo" class="btn-video">🔄 Alternar Vídeo</button>
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="form-section">
+            <h2>Verificador de Idade e Cupom</h2>
+            
+            <form id="meuFormulario">
+                <div class="form-group">
+                    <label for="nome">Seu Nome:</label>
+                    <input type="text" id="nome" placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="idade">Sua Idade:</label>
+                    <input type="number" id="idade" placeholder="Ex: 20">
+                </div>
+
+                <div class="form-group">
+                    <label for="cupom">Cupom de Desconto:</label>
+                    <input type="text" id="cupom" placeholder="Digite o cupom">
+                </div>
+
+                <button type="submit" id="btnEnviar">Verificar Dados</button>
+            </form>
+
+            <div id="mensagemFeedback" class="mensagem-oculta"></div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 - Desenvolvido para a disciplina de Laboratório de programamação Front-End</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
